@@ -1,0 +1,47 @@
+name: Update EPG
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository (no history)
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install requests pytz
+          pip install bs4
+          pip install chardet
+          
+      - name: Delete old file
+        run: |
+          rm -f 247channels.html
+          rm -f out_tivimate.m3u8
+          rm -f out_vlc.m3u
+          
+      - name: Run EPG grabber script
+        run: python epg-grabber/getEpgs.py
+          
+      - name: Run Generate List
+        run: python daddyscrapeEvo.py
+          
+      - name: Force commit and push the changes (no history)
+        run: |
+          git config --global user.name "actions-user"
+          git config --global user.email "actions@github.com"
+          git status
+          git add .
+          git commit -m "Update EPG"
+          git push --force
