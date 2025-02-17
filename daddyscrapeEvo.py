@@ -8,7 +8,7 @@ from dictionaries.tvInfo import CHANNELS_INFO
 
 # File e URL statici
 daddyLiveChannelsFileName = '247channels.html'
-daddyLiveChannelsURL = 'https://thedaddy.to/24-7-channels.php'
+daddyLiveChannelsURL = 'https://daddylive.mp/24-7-channels.php'
 
 # Estrai i dati dai canali in CHANNELS_INFO
 STATIC_TVG_IDS = {}
