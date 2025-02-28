@@ -130,18 +130,18 @@ def generate_m3u8(matches):
             category = search_category(channel_name)
 
             if server_key != "top1":
-                url = (f"https://{server_key}new.iosplayer.ru/{server_key}/premium{channel_id}/mono.m3u8")
+                url = (f"https://{server_key}new.koskoros.ru/{server_key}/premium{channel_id}/mono.m3u8")
             else:
-                url = (f"https://top1.iosplayer.ru/top1/cdn/{channel_id}/mono.m3u8")
+                url = (f"https://top1.koskoros.ru/top1/cdn/{channel_id}/mono.m3u8")
 
             fileVLC.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
-            fileVLC.write(f'#EXTVLCOPT:http-referrer=https://newembedplay.xyz/\n')
+            fileVLC.write(f'#EXTVLCOPT:http-referrer=https://pkpakiplay.xyz/\n')
             fileVLC.write(f'#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1\n')
-            fileVLC.write(f'#EXTVLCOPT:http-origin=https://newembedplay.xyz\n')
+            fileVLC.write(f'#EXTVLCOPT:http-origin=https://pkpakiplay.xyz\n')
             fileVLC.write(f"{url}\n")
             
             fileTIV.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
-            fileTIV.write(f"{url}|Referer=\"https://newembedplay.xyz/\"|User-Agent=\"Mozilla/5.0 iPhone; CPU iPhone OS 17_6_0 like Mac OS X AppleWebKit/605.2.10 KHTML, like Gecko Version/17.6.0 Mobile/16F152 Safari/605.2\"|Origin=\"https://newembedplay.xyz\"\n")
+            fileTIV.write(f"{url}|Referer=\"https://pkpakiplay.xyz/\"|User-Agent=\"Mozilla/5.0 iPhone; CPU iPhone OS 17_6_0 like Mac OS X AppleWebKit/605.2.10 KHTML, like Gecko Version/17.6.0 Mobile/16F152 Safari/605.2\"|Origin=\"https://pkpakiplay.xyz\"\n")
            
     print("M3U8 files generated successfully.")
 
