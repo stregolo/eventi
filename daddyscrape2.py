@@ -111,20 +111,22 @@ def generate_m3u8(matches):
             tvg_id = search_tvg_id(channel_name)
             category = search_category(channel_name)
 
+            "https://" + serverKey + "new.koskoros.ru/" + serverKey + "/" + channelKey + "/mono.m3u8";
+
             fileVLC.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
             fileVLC.write(f'#EXTVLCOPT:http-referrer=https://ilovetoplay.xyz/\n')
             fileVLC.write(f'#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1\n')
             fileVLC.write(f'#EXTVLCOPT:http-origin=https://ilovetoplay.xyz/\n')
             if server_key:  # Se server_key è presente, usa la URL con il server_key
-                fileVLC.write(f"https://{server_key}new.iosplayer.ru/{server_key}/premium{channel_id}/mono.m3u8\n\n")
+                fileVLC.write(f"https://{server_key}new.koskoros.ru/{server_key}/premium{channel_id}/mono.m3u8\n\n")
             else:  # Se server_key non è presente, usa la URL alternativa
-                fileVLC.write(f"https://top1.iosplayer.ru/top1/cdn/{channel_id}/mono.m3u8\n\n")
+                fileVLC.write(f"https://top1.koskoros.ru/top1/cdn/{channel_id}/mono.m3u8\n\n")
 
             fileTIV.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
             if server_key:  # Se server_key è presente, usa la URL con il server_key
-                fileTIV.write(f"https://{server_key}new.iosplayer.ru/{server_key}/premium{channel_id}/mono.m3u8|Referer=\"https://ilovetoplay.xyz/\"|User-Agent=\"Mozilla/5.0 iPhone; CPU iPhone OS 17_6_0 like Mac OS X AppleWebKit/605.2.10 KHTML, like Gecko Version/17.6.0 Mobile/16F152 Safari/605.2\"|Origin=\"https://ilovetoplay.xyz\"\n")
+                fileTIV.write(f"https://{server_key}new.koskoros.ru/{server_key}/premium{channel_id}/mono.m3u8|Referer=\"https://ilovetoplay.xyz/\"|User-Agent=\"Mozilla/5.0 iPhone; CPU iPhone OS 17_6_0 like Mac OS X AppleWebKit/605.2.10 KHTML, like Gecko Version/17.6.0 Mobile/16F152 Safari/605.2\"|Origin=\"https://ilovetoplay.xyz\"\n")
             else:  # Se server_key non è presente, usa la URL alternativa
-                fileTIV.write(f"https://top1.iosplayer.ru/top1/cdn/{channel_id}/mono.m3u8|Referer=\"https://ilovetoplay.xyz/\"|User-Agent=\"Mozilla/5.0 iPhone; CPU iPhone OS 17_6_0 like Mac OS X AppleWebKit/605.2.10 KHTML, like Gecko Version/17.6.0 Mobile/16F152 Safari/605.2\"|Origin=\"https://ilovetoplay.xyz\"\n")
+                fileTIV.write(f"https://top1.koskoros.ru/top1/cdn/{channel_id}/mono.m3u8|Referer=\"https://ilovetoplay.xyz/\"|User-Agent=\"Mozilla/5.0 iPhone; CPU iPhone OS 17_6_0 like Mac OS X AppleWebKit/605.2.10 KHTML, like Gecko Version/17.6.0 Mobile/16F152 Safari/605.2\"|Origin=\"https://ilovetoplay.xyz\"\n")
 
     print("M3U8 files generated successfully.")
 
@@ -147,7 +149,7 @@ def get_server_key(stream_number):
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
         }
 
-        url = f"https://newembedplay.xyz/server_lookup.php?channel_id=premium{stream_number}"
+        url = f"https://pkpakiplay.xyz/server_lookup.php?channel_id=premium{stream_number}"
 
         # Fai la richiesta GET con un timeout
         response = requests.get(url, headers=headers, timeout=0.5)
