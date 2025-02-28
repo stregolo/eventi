@@ -3380,7 +3380,7 @@ CHANNELS_INFO = {
             "name": "Sky Sport MotoGP Italy",
             "tvgid": "Sky.Sport.MotoGP.it",
             "category": "Italy",
-            "serverKey": "ddh2",
+            "serverKey": "nfs",
             "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/sky-sport-motogp-it.png",
             "id": "575"
         },
