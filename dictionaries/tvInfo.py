@@ -3396,7 +3396,7 @@ CHANNELS_INFO = {
             "name": "Sky Sport F1 Italy",
             "tvgid": "Sky.Sport.F1.it",
             "category": "Italy",
-            "serverKey": "ddh2",
+            "serverKey": "nfs",
             "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/sky-sport-f1-it.png",
             "id": "577"
         },
@@ -4172,7 +4172,7 @@ CHANNELS_INFO = {
             "name": "Sky Calcio 7 (257) Italy",
             "tvgid": "DAZN.1.it.it",
             "category": "Italy",
-            "serverKey": "ddh2",
+            "serverKey": "nfs",
             "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/sky-sport-calcio-it.png",
             "id": "877"
         },
