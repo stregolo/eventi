@@ -135,9 +135,9 @@ def generate_m3u8(matches):
                 url = (f"https://top1.newkso.ru/top1/cdn/{channel_id}/mono.m3u8")
 
             fileVLC.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
-            fileVLC.write(f'#EXTVLCOPT:http-referrer=https://pkpakiplay.xyz/\n')
+            fileVLC.write(f'#EXTVLCOPT:http-referrer=https://webxzplay.cfd/\n')
             fileVLC.write(f'#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1\n')
-            fileVLC.write(f'#EXTVLCOPT:http-origin=https://pkpakiplay.xyz\n')
+            fileVLC.write(f'#EXTVLCOPT:http-origin=https://webxzplay.cfd\n')
             fileVLC.write(f"{url}\n")
             
             fileTIV.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
