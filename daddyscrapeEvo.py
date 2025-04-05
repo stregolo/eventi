@@ -130,7 +130,7 @@ def generate_m3u8(matches):
             category = search_category(channel_name)
 
             if server_key != "top1":
-                url = (f"https://{server_key}new.newkos.ru/{server_key}/{channel_id}/mono.m3u8")
+                url = (f"https://{server_key}new.newkso.ru/{server_key}/premium{channel_id}/mono.m3u8")
             else:
                 url = (f"https://top1.newkso.ru/top1/cdn/{channel_id}/mono.m3u8")
 
