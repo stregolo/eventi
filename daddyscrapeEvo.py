@@ -118,8 +118,8 @@ def generate_m3u8(matches):
         return
 
     with open(fileVlc, 'w', encoding='utf-8') as fileVLC, open(fileTiv, 'w', encoding='utf-8') as fileTIV:
-        fileVLC.write('#EXTM3U\n')
-        fileTIV.write('#EXTM3U\n')
+        fileVLC.write('#EXTM3U url-tvg="https://github.com/stregolo/eventi/raw/refs/heads/main/epg.xml.gz"\n')
+        fileTIV.write('#EXTM3U url-tvg="https://github.com/stregolo/eventi/raw/refs/heads/main/epg.xml.gz"\n')
 
         for channel in matches.values():
             channel_id = channel['streamNumber']
