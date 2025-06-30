@@ -1,4 +1,4 @@
-#EXTM3U
+#EXTM3U url-tvg="https://github.com/stregolo/eventi/raw/refs/heads/main/epg.xml.gz"
 #EXTINF:-1 tvg-id="ABC.(WFAA).Dallas,.TX.us" tvg-name="ABC USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/us-local/abc-8-wfaa-us.png" group-title="USA (DADDY LIVE)", ABC USA
 https://zekonew.newkso.ru/zeko/premium51/mono.m3u8|Referer="https://forcedtoplay.xyz/"|User-Agent="Mozilla/5.0 iPhone; CPU iPhone OS 17_6_0 like Mac OS X AppleWebKit/605.2.10 KHTML, like Gecko Version/17.6.0 Mobile/16F152 Safari/605.2"|Origin="https://forcedtoplay.xyz"
 #EXTINF:-1 tvg-id="A.and.E.US.-.Eastern.Feed.us" tvg-name="A&E USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/a-and-e-us.png" group-title="USA (DADDY LIVE)", A&E USA
