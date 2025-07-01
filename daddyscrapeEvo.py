@@ -10,6 +10,8 @@ from dictionaries.tvInfo import CHANNELS_INFO
 daddyLiveChannelsFileName = '247channels.html'
 daddyLiveChannelsURL = 'https://daddylive.mp/24-7-channels.php'
 
+barillaProx = 'https://stregolo-barilla.hf.space/proxy?url='
+
 # Estrai i dati dai canali in CHANNELS_INFO
 STATIC_TVG_IDS = {}
 STATIC_LOGOS = {}
@@ -145,7 +147,7 @@ def generate_m3u8(matches):
             fileTIV.write(f"{url}|Referer=\"https://playnow.wtf/\"|User-Agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0\"\n")
 
             filePRO.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
-            filePRO.write(f"{url}"\n")
+            filePRO.write(f"{barillaProx}{url}"\n")
            
     print("M3U8 files generated successfully.")
 
