@@ -117,9 +117,10 @@ def generate_m3u8(matches):
         print("No matches found. Skipping M3U8 generation.")
         return
 
-    with open(fileVlc, 'w', encoding='utf-8') as fileVLC, open(fileTiv, 'w', encoding='utf-8') as fileTIV:
+    with open(fileVlc, 'w', encoding='utf-8') as fileVLC, open(fileTiv, 'w', encoding='utf-8') as fileTIV, open(filePro, 'w', encoding='utf-8') as filePRO:
         fileVLC.write('#EXTM3U url-tvg="https://github.com/stregolo/eventi/raw/refs/heads/main/epg.xml.gz"\n')
         fileTIV.write('#EXTM3U url-tvg="https://github.com/stregolo/eventi/raw/refs/heads/main/epg.xml.gz"\n')
+        filePRO.write('#EXTM3U url-tvg="https://github.com/stregolo/eventi/raw/refs/heads/main/epg.xml.gz"\n')
 
         for channel in matches.values():
             channel_id = channel['streamNumber']
@@ -142,12 +143,16 @@ def generate_m3u8(matches):
             
             fileTIV.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
             fileTIV.write(f"{url}|Referer=\"https://playnow.wtf/\"|User-Agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0\"\n")
+
+            filePRO.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
+            filePRO.write(f"{url}"\n")
            
     print("M3U8 files generated successfully.")
 
 
 fileVlc = "out_vlc.m3u8"
 fileTiv = "out_tivimate.m3u8"
+filePro = "out_pro.m3u8"
 
 defaultLogo = "https://raw.githubusercontent.com/stregolo/eventi/refs/heads/main/bg/ddy-logo.jpg"
 
