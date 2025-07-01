@@ -138,13 +138,13 @@ def generate_m3u8(matches):
                 url = (f"https://top1.newkso.ru/top1/cdn/{channel_id}/mono.m3u8")
 
             fileVLC.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
-            fileVLC.write(f'#EXTVLCOPT:http-referer=https://playnow.wtf/\n')
+            fileVLC.write(f'#EXTVLCOPT:http-referer=https://forcedtoplay.xyz/\n')
             fileVLC.write(f'#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0\n')
-            fileVLC.write(f'#EXTVLCOPT:http-origin=https://playnow.wtf\n')
+            fileVLC.write(f'#EXTVLCOPT:http-origin=https://forcedtoplay.xyz\n')
             fileVLC.write(f"{url}\n")
             
             fileTIV.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
-            fileTIV.write(f"{url}|Referer=\"https://playnow.wtf/\"|User-Agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0\"\n")
+            fileTIV.write(f"{url}|Referer=\"https://forcedtoplay.xyz/\"|Origin=\"https://forcedtoplay.xyz\"|User-Agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0\"\n")
 
             filePRO.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
             filePRO.write(f'{barillaProx}{url}\n')
