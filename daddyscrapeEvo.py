@@ -136,12 +136,12 @@ def generate_m3u8(matches):
 
             fileVLC.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
             fileVLC.write(f'#EXTVLCOPT:http-referrer=https://forcedtoplay.xyz/\n')
-            fileVLC.write(f'#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1\n')
+            fileVLC.write(f'#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0\n')
             fileVLC.write(f'#EXTVLCOPT:http-origin=https://forcedtoplay.xyz\n')
             fileVLC.write(f"{url}\n")
             
             fileTIV.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
-            fileTIV.write(f"{url}|Referer=\"https://forcedtoplay.xyz/\"|User-Agent=\"Mozilla/5.0 iPhone; CPU iPhone OS 17_6_0 like Mac OS X AppleWebKit/605.2.10 KHTML, like Gecko Version/17.6.0 Mobile/16F152 Safari/605.2\"\n")
+            fileTIV.write(f"{url}|Referer=\"https://forcedtoplay.xyz/\"|User-Agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0\"\n")
            
     print("M3U8 files generated successfully.")
 
