@@ -117,7 +117,7 @@ def generate_m3u8(matches):
         print("No matches found. Skipping M3U8 generation.")
         return
 
-    with open(fileVlc, 'w', encoding='utf-8') as fileVLC, open(fileTiv, 'w', encoding='utf-8') as fileTIV, open(filePro, 'w', encoding='utf-8') as filePRO:
+    with open(fileVlc, 'w', encoding='utf-8') as fileVLC, open(fileTiv, 'w', encoding='utf-8') as fileTIV:
         fileVLC.write('#EXTM3U url-tvg="https://github.com/stregolo/eventi/raw/refs/heads/main/epg.xml.gz"\n')
         fileTIV.write('#EXTM3U url-tvg="https://github.com/stregolo/eventi/raw/refs/heads/main/epg.xml.gz"\n')
 
