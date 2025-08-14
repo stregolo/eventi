@@ -2074,7 +2074,7 @@ https://zekonew.newkso.ru/zeko/premium293/mono.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0
 #EXTVLCOPT:http-origin=https://yoxplay.xyz
 https://zekonew.newkso.ru/zeko/premium35/mono.m3u8
-#EXTINF:-1 tvg-id="12358" tvg-name="Sky Sports Arena UK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-arena-uk.png" group-title="Other", Sky Sports Arena UK
+#EXTINF:-1 tvg-id="None" tvg-name="Sky Sports+ Plus" tvg-logo="https://raw.githubusercontent.com/stregolo/eventi/refs/heads/main/bg/ddy-logo.jpg" group-title="Other", Sky Sports+ Plus
 #EXTVLCOPT:http-referer=https://yoxplay.xyz/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0
 #EXTVLCOPT:http-origin=https://yoxplay.xyz
