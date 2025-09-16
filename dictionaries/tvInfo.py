@@ -1644,7 +1644,7 @@ CHANNELS_INFO = {
             "name": "EuroSport 1 Italy",
             "tvgid": "Eurosport.1.it",
             "category": "Italy",
-            "serverKey": "top2",
+            "serverKey": "wind",
             "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/netherlands/eurosport-1-hd-nl.png",
             "id": "878"
         },
