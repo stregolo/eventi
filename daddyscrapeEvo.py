@@ -135,13 +135,13 @@ def generate_m3u8(matches):
                 url = (f"https://top1.newkso.ru/top1/cdn/{channel_id}/mono.m3u8")
 
             fileVLC.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
-            fileVLC.write(f'#EXTVLCOPT:http-referer=https://yoxplay.xyz/\n')
+            fileVLC.write(f'#EXTVLCOPT:http-referer=https://jxoxkplay.xyz/\n')
             fileVLC.write(f'#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0\n')
-            fileVLC.write(f'#EXTVLCOPT:http-origin=https://yoxplay.xyz\n')
+            fileVLC.write(f'#EXTVLCOPT:http-origin=https://jxoxkplay.xyz\n')
             fileVLC.write(f"{url}\n")
             
             fileTIV.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{channel_name}\" tvg-logo=\"{tvicon_path}\" group-title=\"{category}\", {channel_name}\n")
-            fileTIV.write(f"{url}|Referer=\"https://yoxplay.xyz/\"|Origin=\"https://yoxplay.xyz\"|User-Agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0\"\n")
+            fileTIV.write(f"{url}|Referer=\"https://jxoxkplay.xyz/\"|Origin=\"https://jxoxkplay.xyz\"|User-Agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0\"\n")
 
     print("M3U8 files generated successfully.")
 
